@@ -9,11 +9,12 @@ public class DemoBlaze {
 
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
-		WebDriver Driver = new ChromeDriver();
-		Driver.navigate().to("https://www.demoblaze.com/");
-		Driver.manage().window().maximize();
-		System.out.println(Driver.getTitle());
-		if(Driver.equals(Driver))
+		WebDriver driver = new ChromeDriver();
+		driver.navigate().to("https://www.demoblaze.com/");
+		driver.manage().window().maximize();
+		String title = driver.getTitle();
+		System.out.println(title);
+		if(title.equals("STORE")) 
 			System.out.println("Page landed on correct website");
 		else
 			System.out.println("Page not landed on correct website");
